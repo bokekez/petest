@@ -22,7 +22,7 @@ function TodoForm(props) {
         <div>
             <form className="todo-form" onSubmit={handleSubmit}>
                 <input type='text' placeholder='Add a todo' value={input}
-                name='test' className='todo-input'
+                name='text' className='todo-input'
                 onChange={handleChange}/>
                 <button className='todo-button'>Add todo</button>
             </form>

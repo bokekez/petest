@@ -6,7 +6,7 @@ function TodoList() {
     const [todos, setTodos] = useState([]);
 
     const addTodo = (todo) => {
-        if(!todo.text || /^\s*/.test(todo.text)) {
+        if(!todo.text || /^\s*$/.test(todo.text)) {
             return;
         }
 
@@ -14,6 +14,10 @@ function TodoList() {
 
         setTodos(newTodos);
     };
+
+    const updatedTodos = () => {
+        
+    }
 
     const removeTodo = (id) => {
         const removeArr = [...todos].filter(todo => todo.id !== id)
