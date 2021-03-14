@@ -18,10 +18,10 @@ const Efekt = () => {
         const tempItems = items.map(item => ({
              'name': item.name
         }))
-        const mapNames = tempItems.map(item =>{
-            return <li>{item.name}</li>
-        })
-        setUser(mapNames)
+        // const mapNames = tempItems.map(item =>{
+        //     return <li>{item.name}</li>
+        // })
+        setUser(tempItems)
 
         console.log(tempItems)
         console.log(user)
@@ -39,7 +39,10 @@ const Efekt = () => {
             }
             { show === true ?
             // <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{JSON.stringify(user)}</pre>
-            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{user}</pre>
+            // <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{user}</pre>
+            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>
+                {user.map(item =>(<ul><li>{item.name}</li></ul>))}
+            </pre>
             :
             <pre></pre>
             
