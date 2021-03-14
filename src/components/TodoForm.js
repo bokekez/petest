@@ -5,6 +5,7 @@ function TodoForm(props) {
 
     const handleChange = e => {
         setInput(e.target.value);
+        console.log(input)
     }
 
     const handleSubmit = e => {

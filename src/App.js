@@ -5,6 +5,7 @@ import TodoList from './components/TodoList';
 import Counter from './components/Counter'
 import Efekt from './components/Efekt'
 import Posts from './components/Posts'
+import ListForm from './components/ListForm';
 
 
 function App() {
@@ -22,6 +23,10 @@ function App() {
       <div style={{marginLeft: '5rem'}}>
       <h1>Render</h1>
         <Posts/>
+      </div>
+      <div style={{marginLeft: '5rem'}}>
+      <h1>List</h1>
+        <ListForm/>
       </div>
     </div>
     
