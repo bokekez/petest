@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 const ListForm = (props) => {
     const [listItem, setListItem] = useState('');
@@ -9,10 +9,14 @@ const ListForm = (props) => {
         setListItem(e.target.value);
         console.log(listItem)
     }
+    // useEffect(() => {setListItem()})
+
     const handleSubmit = (e) =>{
         e.preventDefault();
         let addList = listItem;
-        setList([...list, addList])
+        if(addList !== '') {
+            setList([...list, addList])
+        }
         setListItem('');
         const mapList = list.map(item =>{
             return <li>{item}</li>
