@@ -16,15 +16,19 @@ const Efekt = () => {
     
     const getUser = () => {
         const tempItems = items.map(item => ({
-            'name': item.name
+             'name': item.name
         }))
-        
-        setUser(tempItems)
+        const mapNames = tempItems.map(item =>{
+            return <li>{item.name}</li>
+        })
+        setUser(mapNames)
 
         console.log(tempItems)
         console.log(user)
         setShow(true);
     }
+
+
 
     return (
         <div>
@@ -34,7 +38,8 @@ const Efekt = () => {
                 <button onClick={() => setShow(false)} style={{width: '7rem'}}>Hide users</button>
             }
             { show === true ?
-            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{JSON.stringify(user)}</pre>
+            // <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{JSON.stringify(user)}</pre>
+            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{user}</pre>
             :
             <pre></pre>
             
