@@ -13,15 +13,15 @@ const ListForm = (props) => {
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        let addList = listItem;
-        if(addList !== '') {
-            setList([...list, addList])
+        // let addList = listItem;
+        if(listItem !== '') {
+            setList([...list, listItem])
         }
         setListItem('');
-        const mapList = list.map(item =>{
-            return <li>{item}</li>
-        })
-        setUser(mapList)
+        // const mapList = list.map(item =>{
+        //     return <li>{item}</li>
+        // })
+        // setUser(mapList)
     }
 
     return (
@@ -31,7 +31,10 @@ const ListForm = (props) => {
                 name='text' onChange={handleChange}
             ></input>
             <button>Add</button>
-            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{user}</pre>
+            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}> {list.map((item) => (
+            <ul><li>{item}</li></ul>
+            ))}
+            </pre>
             </form>
         </div>
     )
