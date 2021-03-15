@@ -7,6 +7,7 @@ import Efekt from './components/Efekt'
 import Posts from './components/Posts'
 import ListForm from './components/ListForm';
 import Drop from './components/Drop';
+import Color from './components/Color';
 
 
 function App() {
@@ -32,6 +33,10 @@ function App() {
       <div style={{marginLeft: '5rem'}}>
       <h1>Drop</h1>
         <Drop/>
+      </div>
+      <div style={{marginLeft: '5rem'}}>
+      <h1>Color button</h1>
+        <Color/>
       </div>
     </div>
     
