@@ -30,8 +30,8 @@ const ListForm = (props) => {
 
     }
 
-    const deleteItem = () => {
-        const listDelete = list.filter(item => item.id !== list.id)
+    const deleteItem = (id) => {
+        const listDelete = list.filter(item => item.id !== id)
 
         setList(listDelete)
         console.log('12', list)
@@ -47,11 +47,13 @@ const ListForm = (props) => {
             {/* <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}> {list.slice(0).reverse().map((item) => (
             <ul><li>{item.name}</li><button onClick={deleteItem}>Delete</button></ul>
             ))} */}
-            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}> {
-                list.slice(0).reverse().map((item) => (
-                <ul><li>{item.name}</li><button onClick={() => deleteItem(list.id)}
-                >Delete</button></ul>
-            ))}
+            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}><ul> {
+                list.slice(1).reverse().map((item) => (
+                <li>{item.name}<button onClick={() => deleteItem(item.id)}>
+                    Delete
+                </button>
+                </li>
+            ))}</ul>
             </pre>
             </form>
         </div>
