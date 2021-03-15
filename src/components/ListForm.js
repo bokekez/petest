@@ -31,7 +31,7 @@ const ListForm = (props) => {
                 name='text' onChange={handleChange}
             ></input>
             <button>Add</button>
-            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}> {list.map((item) => (
+            <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}> {list.slice(0).reverse().map((item) => (
             <ul><li>{item}</li></ul>
             ))}
             </pre>
