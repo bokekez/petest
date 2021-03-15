@@ -6,6 +6,7 @@ import Counter from './components/Counter'
 import Efekt from './components/Efekt'
 import Posts from './components/Posts'
 import ListForm from './components/ListForm';
+import Drop from './components/Drop';
 
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
       <div style={{marginLeft: '5rem'}}>
       <h1>List</h1>
         <ListForm/>
+      </div>
+      <div style={{marginLeft: '5rem'}}>
+      <h1>Drop</h1>
+        <Drop/>
       </div>
     </div>
     

@@ -41,7 +41,9 @@ const Efekt = () => {
             // <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{JSON.stringify(user)}</pre>
             // <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>{user}</pre>
             <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}>
-                {user.map(item =>(<ul><li>{item.name}</li></ul>))}
+                <ul>
+                    {user.map(item =>(<li>{item.name}</li>))}
+                </ul>
             </pre>
             :
             <pre></pre>

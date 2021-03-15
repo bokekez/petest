@@ -6,8 +6,8 @@ const Posts = () => {
     return(
         <div>
                 <button onClick={() => setType('posts')}>Posts</button>
-                <button onClick={() => setType('users')}>Posts</button>
-                <button onClick={() => setType('comments')}>Posts</button>  
+                <button onClick={() => setType('users')}>Users</button>
+                <button onClick={() => setType('comments')}>Comments</button>  
                 <h1>{type}</h1>
         </div>
     )
