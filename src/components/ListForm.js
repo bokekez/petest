@@ -13,37 +13,28 @@ const ListForm = (props) => {
 
     const handleChange = (e) =>{
         setListItem({name: e.target.value, id: idCount});
-        
     }
 
     const handleSubmit = (e) =>{
         e.preventDefault();
-        // let addList = listItem;
-        // let idCount = listItem.id + 1;
-        // idCount= + 1;
-        
-        // let currentCount = idCount+1;
         if(listItem.name !== '') {
             setIdCount(idCount+1)
-            // setListItem({
-            //     id: currentCount,
-            // });
             setList([...list, listItem])  
         }
         setListItem({
             name: '',
         });
-        console.log(idCount);
-        console.log(listItem);
-        console.log('1', list)
+        // console.log(idCount);
+        // console.log(listItem);
+        // console.log('1', list)
 
     }
 
     const deleteItem = () => {
-       const listDelete = list.filter(item => item.id !== list.id)
+        const listDelete = list.filter(item => item.id !== list.id)
 
-       setList(listDelete)
-
+        setList(listDelete)
+        console.log('12', list)
     }
 
     return (
@@ -58,7 +49,7 @@ const ListForm = (props) => {
             ))} */}
             <pre style={{display:'flex', flexDirection:'column', width: '7rem'}}> {
                 list.slice(0).reverse().map((item) => (
-                <ul><li>{item.name}</li><button onClick={deleteItem}
+                <ul><li>{item.name}</li><button onClick={() => deleteItem(list.id)}
                 >Delete</button></ul>
             ))}
             </pre>
