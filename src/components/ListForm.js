@@ -9,36 +9,41 @@ const ListForm = (props) => {
         name: '',
         id: 0,
     }]);
-    const [user, setUser] = useState([]);
+    const [idCount, setIdCount] = useState(1);
 
     const handleChange = (e) =>{
-        setListItem({name: e.target.value});
-        console.log(listItem)
+        setListItem({name: e.target.value, id: idCount});
+        
     }
 
     const handleSubmit = (e) =>{
         e.preventDefault();
         // let addList = listItem;
-        let idCount = listItem.id + 1;
+        // let idCount = listItem.id + 1;
+        // idCount= + 1;
         
+        // let currentCount = idCount+1;
         if(listItem.name !== '') {
-            setList([...list, listItem])
+            setIdCount(idCount+1)
+            // setListItem({
+            //     id: currentCount,
+            // });
+            setList([...list, listItem])  
         }
         setListItem({
             name: '',
         });
         console.log(idCount);
         console.log(listItem);
-        // const tempItems = list.map(item => ({
-        //     'name': item.name
-        // }))
-        // setUser(tempItems)
-
+        console.log('1', list)
 
     }
 
     const deleteItem = () => {
-        list = list.filter(item => item.id !== listItem.id)
+       const listDelete = list.filter(item => item.id !== list.id)
+
+       setList(listDelete)
+
     }
 
     return (
