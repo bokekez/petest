@@ -22,7 +22,7 @@ const Drop = () => {
             <option value='Jagoda'>Jagoda</option>
         </select>
         </form>
-        <h1 style={{height: '1rem', marginLeft: '3rem'}}>{itemi}</h1>
+            <h1 style={{height: '1rem'}}>{itemi}</h1>
         </div>
     )
 }
