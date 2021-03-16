@@ -12,29 +12,32 @@ import Color from './components/Color';
 
 function App() {
   return (
-    <div className="App" style={{display: 'flex', flexDirection:'row' }}>
-      <TodoList/>
-      <div style={{marginLeft: '5rem'}}>
+    <div className="App" 
+    style={{display: 'flex', flexDirection:'row', justifyContent: 'center', alignContent: 'space-between', alignItems: 'center' }}>
+      <div>
+        <TodoList/>
+      </div>
+      <div style={{marginLeft: '5rem', borderLeft: 'solid'}}>
       <h1>Counter</h1>
         <Counter/>
       </div>
-      <div style={{marginLeft: '5rem'}}>
+      <div style={{marginLeft: '5rem', borderLeft: 'solid'}}>
       <h1>Api</h1>
         <Efekt/>
       </div>
-      <div style={{marginLeft: '5rem'}}>
+      <div style={{marginLeft: '5rem', borderLeft: 'solid'}}>
       <h1>Render</h1>
         <Posts/>
       </div>
-      <div style={{marginLeft: '5rem'}}>
+      <div style={{marginLeft: '5rem', borderLeft: 'solid'}}>
       <h1>List</h1>
         <ListForm/>
       </div>
-      <div style={{marginLeft: '5rem'}}>
+      <div style={{marginLeft: '5rem', borderLeft: 'solid'}}>
       <h1>Drop</h1>
         <Drop/>
       </div>
-      <div style={{marginLeft: '5rem'}}>
+      <div style={{marginLeft: '5rem', borderLeft: 'solid'}}>
       <h1>Color button</h1>
         <Color/>
       </div>

@@ -5,6 +5,11 @@ const Color = () => {
     const [dim, setDim] = useState(1)
     const [textColor, setTextColor] = useState('blue')
 
+    const boja =  {
+        color: 'green',
+        text: 'black'
+    }
+
     const dimButton = (e) => {
         setDim(0.7);
     }
@@ -15,10 +20,10 @@ const Color = () => {
 
     const changeColor = (e) =>{
         if (color === 'white'){
-            setColor('blue');
+            setColor('#66ffff');
             setTextColor('red');
         }
-        else if (color === 'blue'){
+        else if (color === '#66ffff'){
             setColor('red');
             setTextColor('white');    
         }
